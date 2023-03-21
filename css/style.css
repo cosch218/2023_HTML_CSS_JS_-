@@ -203,8 +203,8 @@ input[type="text"], input[type="submit"], input[type="checkbox"], button {
 }
 
 .plusbtn {
-    position: fixed;
-    left: 45%;
+    position: absolute;
+    left: 50%;
     bottom: 80px;
     width: 80px;
     height: 80px;
@@ -215,11 +215,12 @@ input[type="text"], input[type="submit"], input[type="checkbox"], button {
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
+    transform: translate(-50%, 0);
 }
 
 .xbtn {
     position: fixed;
-    left: 45%;
+    left: 50%;
     bottom: 80px;
     width: 80px;
     height: 80px;
@@ -230,5 +231,5 @@ input[type="text"], input[type="submit"], input[type="checkbox"], button {
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
-    
+    transform: translate(-50%, 0);
 }
