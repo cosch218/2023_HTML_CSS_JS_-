@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap_date_clock">
+            <!-- datebox -->
+            <div class="datebox">
+                <h1 id="date" class="date">YYYY년 MM월 dd일</h1>
+                <h2 id="day" class="day">N요일</h2>
+            </div>
+            <!-- clockbox -->
+            <div class="clockbox">
+                <p class="currenttime">현재시간</p>
+                <h2 id="clock" class="clock">00:00</h2>
+            </div>
+        </div>
+        <!-- countbox -->
+        <div class="countbox">
+            <p id="donenum" class="donenum">0개 완료</p>
+            <p id="restnum" class="restnum">0개 남음 </p>
+        </div>
+        <!-- todolist -->
+        <!-- div에 overflow 스크롤 -->
+        <div class="content">
+            <ul id="todolist" class="todolist">
+                <li class="hidden">
+                    <input type="checkbox" id="checkbox" class="checkbox">
+                    <span id="text" class="text">해야할 일</span>
+                    <span id="time" class="time">00:00</span>
+                    <button id="btn" class="btn">X</button>
+                </li>
+            </ul>
+        </div>
+        <!-- addtodo -->
+        <form id="form-addtodo" class="form-addtodo" action="">
+            <input type="text" id="todo" class="todo hidden" placeholder="할 일을 입력 후 Enter를 누르세요">
+            <input type="submit" value="" id="btn" class="btn hidden">
+            <!-- + 모양이었다가 input:text 클릭하면 x로 모양 변경 -->
+        </form>
+        <button id="plusbtn" class="plusbtn"></button>
+        <button id="xbtn" class="xbtn hidden"></button>
+    </div>
+
+    <script src="./js/background.js"></script>
+    <script src="./js/datebox.js"></script>
+    <script src="./js/clockbox.js"></script>
+    <script src="./js/todolist.js"></script>
+</body>
+</html>

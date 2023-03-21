@@ -1,0 +1,237 @@
+@font-face {
+    font-family: 'KoPubWorld Dotum_ProMedium';
+    src: url(../font/KoPubWorld\ Dotum_Pro\ Medium.otf);
+}
+
+@font-face {
+    font-family: 'KoPubWorld Dotum_ProLight';
+    src: url(../font/KoPubWorld\ Dotum_Pro\ Light.otf);
+}
+
+/* JS 활용 클래스 */
+.hidden {
+    display: none;
+}
+
+.done {
+    color : rgb(195, 195, 197);
+    text-decoration: line-through;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/* 기본 태그 */
+html {
+}
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    padding: 3vh 0;
+    text-align: center;
+    font-family: 'KoPubWorld Dotum_ProMedium';
+    color: rgb(57, 55, 59);
+}
+
+input[type="text"], input[type="submit"], input[type="checkbox"], button {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+}
+
+
+/* class 이름으로 접근 */
+.wrap {
+    box-sizing: border-box;
+    max-width: 600px;
+    min-height: 94vh;
+    max-height: 94vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: auto;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 2px 2px 7px 7px rgba(161, 161, 161, 0.1);
+}
+
+.wrap_date_clock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 30px;
+}
+
+.datebox {
+    display: inline-block;
+    text-align: left;
+}
+
+.datebox .date {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.datebox .day {
+    font-size: 1.3rem;
+    padding-top: 10px;
+}
+
+.clockbox {
+    display: inline-block;
+    text-align: right;
+}
+
+.clockbox .currenttime {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+
+.clockbox .clock {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.countbox {
+    text-align: left;
+    padding-top: 50px;
+}
+
+.countbox .donenum {
+    font-size: 1.1rem;
+    color: gray;
+}
+
+.countbox .restnum {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-top:5px;
+    color: rgb(214, 140, 248);
+}
+
+.content {
+    width: 100%;
+    height: 600px;
+    margin-top: 30px;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+.content .todolist {
+    padding: 30px 0;
+}
+
+.content .todolist li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.content .todolist li:first-child {
+    display: none;
+}
+
+.content .todolist li:last-child {
+    padding-bottom: 0;
+}
+
+
+.content .todolist li .checkbox {
+    appearance: none;
+    border: 1px solid rgb(195, 195, 197);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.content .todolist li .checkbox:checked {
+    border: 1px solid rgb(214, 140, 248);
+}
+
+.content .todolist li .checkbox:checked:after {
+    content: "\2714";
+    font-size: 1.3rem;
+    font-weight: lighter;
+    padding: 0 5px;
+    color: rgb(214, 140, 248);
+}
+
+.content .todolist li .text {
+    width: 330px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+.content .todolist li .time {
+    color: rgb(175, 175, 184);
+    font-size: 0.85rem;
+    font-family: 'KoPubWorld Dotum_ProLight';
+}
+
+.content .todolist li .btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: rgb(175, 175, 184);
+    transition: all 0.1s;
+}
+
+.content .todolist li .btn:hover {
+    background-color: rgb(221, 76, 76);
+    color: white;
+    transition: all 0.1s;
+}
+
+.form-addtodo .todo {
+    width: 450px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 0 15px;
+    border: 1px solid rgb(216, 216, 219);
+    margin-top: 20px;
+}
+
+.form-addtodo .todo:focus {
+    font-family: 'KoPubWorld Dotum_ProMedium';
+}
+
+.plusbtn {
+    position: fixed;
+    left: 45%;
+    bottom: 80px;
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgb(227, 168, 255);
+    background-image: url(../img/icon_plus.png);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.xbtn {
+    position: fixed;
+    left: 45%;
+    bottom: 80px;
+    width: 80px;
+    height: 80px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: rgb(231, 92, 92);
+    background-image: url(../img/icon_x.png);
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
